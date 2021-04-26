@@ -1,5 +1,17 @@
 <div>
-<p>{{post}} - {{user}}</p>
+  <p>{{post}} - {{user}}</p>
+</div>
 
-<button>like</button>
+<div>
+  {{nLike}} <button (click)="like()">like</button>
+</div>
+
+<div>
+  <input type="text" name = "commment" #commento>
+  <label for="commment">commento</label>
+  <button (click)="commenta(commento.value)">commento</button>
+</div>
+
+<div *ngFor="let c of commentList">
+  {{c}}
 </div>
